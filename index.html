@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style-dist.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator-js</title>
   </head>
   <body>
-    <input class="input-view" type="text" />
-    <button type="submit" class="one">1</button>
-    <button type="submit" class="Two">2</button>
-    <button type="submit" class="Three">3</button>
-    <button type="submit" class="four">4</button>
-    <button type="submit" class="five">5</button>
-    <button type="submit" class="six">6</button>
-    <button type="submit" class="seven">7</button>
-    <button type="submit" class="height">8</button>
-    <button type="submit" class="nine">9</button>
-    <button type="submit" class="cero">0</button>
-    <button type="submit" class="res">=</button>
-    <button type="submit" class="sum">+</button>
-    <button type="submit" class="multiply">x</button>
-    <button type="submit" class="minus">-</button>
-    <button type="submit" class="divicion">/</button>
+    <div class="container">
+        <h1 class="title">Calculator-js</h1>
+      <main>
+        <div class="calculator">
+          <input class="input-view" type="text" placeholder="1.82 eliminar xd"  readonly />
+          <button type="submit" class="del button button--active">&#60;&#60;</button>
+          <button type="submit" class="res button button--active">=</button>
+          <button type="submit" class="sum button button--active">+</button>
+          <button type="submit" class="multiply button button--active">x</button>
+          <button type="submit" class="minus button button--active">-</button>
+          <button type="submit" class="division button button--active">/</button>
+          <button type="submit" class="resto button button--active">%</button>
+          <button type="submit" class="one button button--active">1</button>
+          <button type="submit" class="Two button button--active">2</button>
+          <button type="submit" class="Three button button--active">3</button>
+          <button type="submit" class="four button button--active">4</button>
+          <button type="submit" class="five button button--active">5</button>
+          <button type="submit" class="six button button--active">6</button>
+          <button type="submit" class="seven button button--active">7</button>
+          <button type="submit" class="eight button button--active">8</button>
+          <button type="submit" class="nine button button--active">9</button>
+          <button type="submit" class="cero button button--active">0</button>
+          <button type="submit" class="button-empty button"></button
+          ><button type="submit" class="button-empty-two button"></button>
+        </div>
+      </main>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
