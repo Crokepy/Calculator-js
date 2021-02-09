@@ -1,5 +1,6 @@
 const view = document.getElementById("view");
 const del = document.getElementById("delete");
+const sum = document.getElementById("sum");
 const result = document.getElementById("result");
 const mul = document.getElementById("mul");
 const rest = document.getElementById("rest");
@@ -24,5 +25,27 @@ function viewRes(numVar) {
   });
 }
 
+function valorLog(op) {
+  op.addEventListener("click", () => {
+    var value1 = view.value;
+    console.log(value1);
+    Reflect.set(view, "value", "");
+  });
+}
+
+// Boton view user
+
 viewRes(one);
 viewRes(two);
+viewRes(three);
+viewRes(four);
+viewRes(five);
+viewRes(six);
+viewRes(seven);
+viewRes(eight);
+viewRes(nine);
+viewRes(cero);
+
+// function value
+
+valorLog(sum);
