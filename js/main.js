@@ -2,13 +2,13 @@ const view = document.getElementById("view");
 const del = document.getElementById("delete");
 const sum = document.getElementById("sum");
 const result = document.getElementById("result");
-const mul = document.getElementById("mul");
-const rest = document.getElementById("rest");
+const mult = document.getElementById("mult");
+const rest = document.getElementById("res");
 const div = document.getElementById("div");
 const one = document.getElementById("one");
 const two = document.getElementById("two");
 const three = document.getElementById("three");
-const four = document.getElementById("five");
+const four = document.getElementById("four");
 const five = document.getElementById("five");
 const six = document.getElementById("six");
 const seven = document.getElementById("seven");
@@ -30,8 +30,47 @@ function valorLog(op) {
     var value1 = view.value;
     console.log(value1);
     Reflect.set(view, "value", "");
+    result.addEventListener("click", () => {
+      var value2 = view.value;
+      if (op === sum) {
+        let numInt1 = parseInt(value1);
+        let numInt2 = parseInt(value2);
+        let resultado = numInt1 + numInt2;
+        Reflect.set(view, "value", resultado);
+        console.log(resultado);
+      } else if (op === rest) {
+        let numInt1 = parseInt(value1);
+        let numInt2 = parseInt(value2);
+        let resultado = numInt1 - numInt2;
+        Reflect.set(view, "value", resultado);
+        console.log(resultado);
+      } else if (op === div) {
+        let numInt1 = parseInt(value1);
+        let numInt2 = parseInt(value2);
+        let resultado = numInt1 / numInt2;
+        Reflect.set(view, "value", resultado);
+        console.log(resultado);
+      } else if (op === mult) {
+        let numInt1 = parseInt(value1);
+        let numInt2 = parseInt(value2);
+        let resultado = numInt1 * numInt2;
+        Reflect.set(view, "value", resultado);
+        console.log(resultado);
+      }
+    });
   });
 }
+
+del.addEventListener("click", () => {
+  Reflect.set(view, "value", "");
+});
+
+result.addEventListener("click", () => {
+  let egg = view.value;
+  if (egg === "Croque") {
+    Reflect.set(view, "value", "!Hey¡, no deberias ver esto");
+  }
+});
 
 // Boton view user
 
@@ -49,3 +88,6 @@ viewRes(cero);
 // function value
 
 valorLog(sum);
+valorLog(rest);
+valorLog(mult);
+valorLog(div);
